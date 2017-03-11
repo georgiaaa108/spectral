@@ -40,6 +40,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 	body {
 		background: _palette(bg);
+		font-size: 85% !important;
 
 		&.is-loading {
 			*, *:before, *:after {
@@ -502,9 +503,12 @@ $baseurl: '{{ site.baseurl }}/images';
 			color: _palette(accent4, bg);
 		}
 	}
-
+/*Contacts*/
+#profile{
+margin-bottom: 1em;
+padding-bottom: 2em;
+}
 /* Image */
-
 	.image {
 		border-radius: 3px;
 		border: 0;
@@ -529,7 +533,8 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 
 		&.left,
-		&.right {
+		&.right,
+		&.center {
 			max-width: 40%;
 
 			img {
@@ -547,8 +552,9 @@ $baseurl: '{{ site.baseurl }}/images';
 			}
 		}
 		&.propic{
-			width: 200px;
-			height: 200px;
+			width: 170px;
+			height: 170px;
+			overflow: hidden;
 		}
 	}
 
@@ -1679,7 +1685,7 @@ $baseurl: '{{ site.baseurl }}/images';
 	#main {
 		> header {
 			@include padding(12em, 0);
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner.jpg")'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.25))', 'url("#{$baseurl}/banner.jpg")'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -1804,7 +1810,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 	body.landing {
 		#page-wrapper {
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner.jpg")'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.25))', 'url("#{$baseurl}/banner.jpg")'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -1825,7 +1831,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 			#banner,
 			.wrapper.style4 {
-				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner.jpg")'));
+				@include vendor('background-image', ('linear-gradient(top left, rgba(0,0,0,0.8), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner.jpg")'));
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;
