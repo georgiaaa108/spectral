@@ -539,12 +539,16 @@ $baseurl: '{{ site.baseurl }}/images';
 
 		&.fit {
 			display: block;
-			margin: 0 0 _size(element-margin) 0;
+			//margin: 0 0 _size(element-margin) 0;
 			width: 100%;
 
 			img {
 				width: 100%;
 			}
+		}
+		&.propic{
+			width: 200px;
+			height: 200px;
 		}
 	}
 
