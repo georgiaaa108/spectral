@@ -8,7 +8,7 @@ $baseurl: '{{ site.baseurl }}/images';
 @import 'libs/functions';
 @import 'libs/mixins';
 @import 'font-awesome.min.css';
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic');
 
 /*
 	Spectral by HTML5 UP
@@ -40,6 +40,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 	body {
 		background: _palette(bg);
+		font-size: 85% !important;
 
 		&.is-loading {
 			*, *:before, *:after {
@@ -502,9 +503,12 @@ $baseurl: '{{ site.baseurl }}/images';
 			color: _palette(accent4, bg);
 		}
 	}
-
+/*Contacts*/
+#profile{
+margin-bottom: 1em;
+padding-bottom: 2em;
+}
 /* Image */
-
 	.image {
 		border-radius: 3px;
 		border: 0;
@@ -529,7 +533,8 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 
 		&.left,
-		&.right {
+		&.right,
+		&.center {
 			max-width: 40%;
 
 			img {
@@ -539,12 +544,17 @@ $baseurl: '{{ site.baseurl }}/images';
 
 		&.fit {
 			display: block;
-			margin: 0 0 _size(element-margin) 0;
+			//margin: 0 0 _size(element-margin) 0;
 			width: 100%;
 
 			img {
 				width: 100%;
 			}
+		}
+		&.propic{
+			width: 170px;
+			height: 170px;
+			overflow: hidden;
 		}
 	}
 
@@ -1675,7 +1685,7 @@ $baseurl: '{{ site.baseurl }}/images';
 	#main {
 		> header {
 			@include padding(12em, 0);
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner.jpg")'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.25))', 'url("#{$baseurl}/banner.jpg")'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -1800,7 +1810,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 	body.landing {
 		#page-wrapper {
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner.jpg")'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.25))', 'url("#{$baseurl}/banner.jpg")'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -1821,7 +1831,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 			#banner,
 			.wrapper.style4 {
-				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner.jpg")'));
+				@include vendor('background-image', ('linear-gradient(top left, rgba(0,0,0,0.8), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner.jpg")'));
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;
